@@ -26,7 +26,7 @@ def index():
             )
             textResult = textResponse.choices[0].message.content
 
-            imgResponse = client.images.generate(
+             imgResponse = openai.Image.create(
                 prompt=prompt,
                 n=1,
                 size="1024x1024"
