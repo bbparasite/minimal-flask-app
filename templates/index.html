@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -9,12 +9,14 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
         body {
-            background-image: url('');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
     </style>
 </head>
 
-<body>
+<body {% if imgResult %}style="background-image: url('{{ imgResult }}');" {% endif %}>
     <div class="container text-center mt-5">
         <h1 class="display-4">Ask me anything</h1>
         <form method="POST" class="mx-auto col-md-8 col-lg-6">
@@ -26,12 +28,9 @@
             </div>
         </form>
 
-        {% if result %}
+        {% if textResult %}
         <h3 class="mt-4">Response:</h3>
         <div class="alert alert-secondary">{{ textResult }}</div>
-        <script>
-            document.body.style.backgroundImage = 'url(' + imgResult + ')';
-        </script>
         {% endif %}
     </div>
 </body>
