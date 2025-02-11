@@ -24,7 +24,7 @@ def index():
                 temperature=1.2,
                 max_tokens=50
             )
-            textResult = textResponse.choices[0].message['content']
+            textResult = textResponse.choices[0].message.content
 
             imgResponse = client.images.generate(
                 prompt=prompt,
