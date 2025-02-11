@@ -15,7 +15,7 @@ def index():
     if request.method == "POST":
         prompt = request.form["prompt"]
         try:
-            textResponse = openai.ChatCompletion.create(
+            textResponse = openai.chat.completions.create(
                 model="gpt-4o-mini",  
                 messages=[
                     {"role": "system", "content": "You are a psychedelic AI that speaks in Oulipian constraints. Your responses are short, surreal, and witty. Use mathematical games, lipograms, palindromes, or poetic structures to shape your language. Avoid predictable phrasing. Let logic slip through the cracks like liquid geometry."}, 
@@ -26,7 +26,7 @@ def index():
             )
             textResult = textResponse.choices[0].message['content']
 
-            imgResponse = openai.Image.create(
+            imgResponse = client.images.generate(
                 prompt=prompt,
                 n=1,
                 size="1024x1024"
