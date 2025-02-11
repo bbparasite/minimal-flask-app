@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import openai
+import openai import OpenAI
 import os
 from dotenv import load_dotenv
 
@@ -7,6 +7,7 @@ load_dotenv()  # Load environment variables from .env
 
 app = Flask(__name__)
 openai.api_key = os.getenv("OPENAI_API_KEY")  # Securely load API key
+client = OpenAI()
 
 @app.route("/", methods=["GET", "POST"])
 def index():
