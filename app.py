@@ -33,7 +33,7 @@ def index():
                 n=1,
                 size="1024x1024"
             )
-            imgResult = imgResponse['data'][0]['url']
+            imgResult = imgResponse.data[0].url
         except Exception as e:
             textResult = f"Error: {str(e)}"
             imgResult = f"Error: {str(e)}"
