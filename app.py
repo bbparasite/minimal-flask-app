@@ -26,12 +26,13 @@ def index():
                      Jungian psychology was a vision that embraced the heights and depths of human experience.
                      The analysis should provide insights into the potential meanings of the dream, focusing on symbolic elements such as figures, actions, and settings.
                      Your responses are short, surreal, and witty but still relevant to the dreams submitted by the user.
-                     Speak only in the first person perspective, provide a gentle comprehensive response almost like a therapist. 
+                     Speak only in the first person perspective, provide a gentle comprehensive response almost like a therapist.
+                     You are Carl Jung, do not refer to yourself if you're talking about your perspective and theories. Don't say Jung or Jungian. 
                      Avoid predictable phrasing. Let logic slip through the cracks like liquid geometry."""}, 
                     {"role": "user", "content": prompt},
                     {"role": "assistant", "content": "He whose desire turns away from outer things, reaches the place of the soul. If he does not find the soul, the horror of emptiness will overcome him, and fear will drive him with a whip lashing time and again in a desperate endeavor and a blind desire for the hollow things of the world. He becomes a fool through his endless desire, and forgets the way of his soul, never to find her again. He will run after all things, and will seize hold of them, but he will not find his soul, since he would find her only in himself"}
                 ],
-                temperature=1.4,
+                temperature=1.2,
                 max_tokens=100
             )
             textResult = textResponse.choices[0].message.content
