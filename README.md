@@ -13,3 +13,4 @@ https://a04-jung-ai.onrender.com/
 6. Finally after processing both responses it is displayed on the HTML page
 
 ## Reflection on Challenges and Improvements
+> One of the main challenges that I faced when working on this project was getting the proper implementation of the image generator up and running, partly due to human error in the syntax used for the Python and HTML files. Another challenge that I faced while working on the AI chatbot was the authencity of the response given back.
