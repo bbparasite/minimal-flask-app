@@ -13,12 +13,17 @@
             background-repeat: no-repeat;
             background-position: center;
         }
+
+        mark {
+            background-color: white;
+            color: black;
+        }
     </style>
 </head>
 
 <body {% if imgResult %}style="background-image: url('{{ imgResult }}');" {% endif %}>
     <div class="container text-center mt-5">
-        <h1 class="display-4">Give meaning to your dream...</h1>
+        <h1 class="display-4"><mark>Give meaning to your dream...</mark></h1>
         <form method="POST" class="mx-auto col-md-8 col-lg-6">
             <div class="mb-3">
                 <textarea name="prompt" rows="4" class="form-control" placeholder="Enter your prompt..."></textarea>
@@ -29,7 +34,7 @@
         </form>
 
         {% if textResult %}
-        <h3 class="mt-4">Response:</h3>
+        <h3 class="mt-4"><mark>Response:</mark></h3>
         <div class="alert alert-secondary">{{ textResult }}</div>
         {% endif %}
     </div>
