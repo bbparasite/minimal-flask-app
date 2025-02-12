@@ -8,7 +8,7 @@ https://a04-jung-ai.onrender.com/
   1. When landing on the page the user is asked to provide and example of a dream that they have had
   2. Creating the prompt for the AI bot can be somewhat specific or completely wild
   3. After writing out the dream prompt the user can then submit it for the AI to analyze
-  4. The prompt gets sent to GPT4oMini and the prompt is interpted by the AI with the rulesets established above
+  4. The prompt gets sent to GPT-4o mini and the prompt is interpted by the AI with the rulesets established above
   5. Once the response from the AI is complete it is then fed directly into DALL-E (not the original user prompt itself)
   6. Finally after processing both responses it is displayed on the HTML page
 
